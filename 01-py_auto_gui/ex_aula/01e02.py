@@ -4,8 +4,6 @@ import webbrowser
 
 webbrowser.open("http://localhost:8000")
 
-pyautogui.click()
-
 time.sleep(1)
 pyautogui.press("tab")
 time.sleep(1)
@@ -59,16 +57,29 @@ pyautogui.write('Texto aleatorio')
 time.sleep(1)
 
 #ex 2 - pulando
-pyautogui.press(['tab', 'tab', 'tab', 'tab', 'tab', 'tab', 'tab'])
 
-pyautogui.write('Texto para copiar')
+#voltando pro topo
+pyautogui.hotkey('shift', 'tab')
+pyautogui.hotkey('shift', 'tab')
+pyautogui.hotkey('shift', 'tab')
+pyautogui.hotkey('shift', 'tab')
+pyautogui.hotkey('shift', 'tab')
+pyautogui.hotkey('shift', 'tab')
+pyautogui.hotkey('shift', 'tab')
+pyautogui.hotkey('shift', 'tab')
+
+
 time.sleep(1)
 pyautogui.hotkey('ctrl', 'a')  # selecionar tudo
 time.sleep(1)
 pyautogui.hotkey('ctrl', 'c')  # copiar
 time.sleep(1)
-pyautogui.press('tab')
+
+
+#tap 8 vezes
+pyautogui.press(['tab', 'tab', 'tab', 'tab', 'tab', 'tab', 'tab', 'tab'])
+
+pyautogui.press('enter')
+
 pyautogui.hotkey('ctrl', 'v')  # colar
 time.sleep(1)
-
-#ex 3
