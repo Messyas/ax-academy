@@ -18,5 +18,5 @@ while i < QTDE:
     time.sleep(INTERVALO)
     i += 1
     x, y = pyautogui.position()
-    print('Leitura', i, '-> Mouse em:', x, y)
+    print('MessyasLeitura', i, '-> Mouse em:', x, y)
 print('Fim.')
