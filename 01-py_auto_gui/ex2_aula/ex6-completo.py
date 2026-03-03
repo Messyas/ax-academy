@@ -22,9 +22,9 @@ while True:
 # Escrever mensagem
 agora = datetime.now().strftime("%Y-%m-%d%H:%M:%S")
 time.sleep(0.1)
-mensagem = f"Estudo de caso RPA - Windows + PyAutoGUI + na Data: {agora}\n"
+mensagem = f"Estudo de caso RPA - Windows + PyAutoGUI + na data: {agora}\n"
 time.sleep(0.1)
-pag.write(mensagem, interval=0.01)
+pag.write(mensagem, interval=0.02)
 time.sleep(0.3)
 
 # Salvar no Documents do usuário
