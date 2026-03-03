@@ -1,0 +1,1 @@
+#mensagem = f"Estudo de caso RPA - Windows + PyAutoGUI + na Data: {agora}\n"

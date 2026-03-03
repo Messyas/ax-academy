@@ -19,7 +19,9 @@ time.sleep(1)
 
 # Escrever mensagem
 agora = datetime.now().strftime("%Y-%m-%d%H:%M:%S")
-mensagem = "Estudo de caso RPA - Windows + PyAutoGUI\n"
+time.sleep(0.1)
+mensagem = f"Estudo de caso RPA - Windows + PyAutoGUI + na Data: {agora}\n"
+time.sleep(0.1)
 pag.write(mensagem, interval=0.01)
 time.sleep(0.3)
 
@@ -30,7 +32,7 @@ desktop_path = home_path / "Documents"
 if not desktop_path.is_dir():
     desktop_path = home_path / "Documentos"
 
-time.sleep(1.0)
+time.sleep(0.3)
 
 stamp = datetime.now().strftime("%Y%m%d_%H%M%S")
 arquivo_txt = desktop_path / f"caso_rpa_notepad_{stamp}.txt"
@@ -40,7 +42,6 @@ time.sleep(1.0)
 
 # digita o caminho completo e confirma
 pag.write(str(arquivo_txt))
-time.sleep(0.2)
 pag.press("enter")
 time.sleep(1.0)
 

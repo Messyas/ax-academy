@@ -16,7 +16,7 @@ time.sleep(1)
 
 # Escrever mensagem
 agora = datetime.now().strftime("%Y-%m-%d%H:%M:%S")
-mensagem = "Estudo de caso RPA - Windows + PyAutoGUI\n"
+mensagem = f"Estudo de caso RPA - Windows + PyAutoGUI + na Data: {agora}\n"
 pag.write(mensagem, interval=0.01)
 time.sleep(0.3)
 

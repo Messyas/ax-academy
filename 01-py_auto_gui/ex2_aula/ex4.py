@@ -1,18 +1,23 @@
-# Melhoria 3: Fechar sem depender de atalhos de menu
-# Problema: alt+a e depois s depende do idioma do Notepad/menu (PT/EN) e de como o Windows está configurado.
-# É um dos trechos que mais quebra.
-# Melhoria: usar Alt+F4 (padrão universal)
-
 import subprocess
 import time
 from pathlib import Path
 from datetime import datetime
 import pyautogui as pag
+import pygetwindow as gw
 
 # Abrir Bloco de Notas
 subprocess.Popen(['notepad.exe'])
 
-time.sleep(1)
+# Espera abrir
+titulos_possiveis = ['Bloco de Notas', 'Notepad']
+print('Aguardando o Notepad abrir... ')
+while True:
+    notepad_aberto = any(gw.getWindowsWithTitle(t)
+        for t in titulos_possiveis)
+    if notepad_aberto:
+        print('Notepad está aberto. Saindo do bot.')
+        break
+    time.sleep(0.5)
 
 # Escrever mensagem
 agora = datetime.now().strftime("%Y-%m-%d%H:%M:%S")
@@ -33,6 +38,13 @@ time.sleep(0.3)
 
 stamp = datetime.now().strftime("%Y%m%d_%H%M%S")
 arquivo_txt = desktop_path / f"caso_rpa_notepad_{stamp}.txt"
+
+#antes de salvar printa
+time.sleep(1)
+
+# Salvar a tela inteira em arquivo
+pag.screenshot('notepad.png')
+time.sleep(2)
 
 pag.hotkey("ctrl", "s")
 time.sleep(1.0)
@@ -55,4 +67,3 @@ pag.keyUp("alt")
 
 print("Concluído.")
 print("Arquivo TXT:", arquivo_txt)
-
