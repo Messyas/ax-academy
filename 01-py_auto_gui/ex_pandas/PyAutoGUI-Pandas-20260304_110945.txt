@@ -1,0 +1,50 @@
+Nome:  Ana Silva
+Email: ana@empresa.om
+Cargo: Analista
+Telefone: (11) 99999-1111
+
+Nome:  Bruno Lima
+Email: bruno@empresa.com
+Cargo: Gerente
+Telefone: (12) 92449-1224
+
+Nome:  Carla Souza
+Email: carla@empresa.om
+Cargo: Diretor
+Telefone: (11) 99999-1224
+
+Nome:  Diego Martins
+Email: diego@empresa.om
+Cargo: Analista
+Telefone: (11) 99999-6444
+
+Nome:  Eduarda Costa
+Email: eduarda@empresa.om
+Cargo: Coordenadora
+Telefone: (11) 99999-9333
+
+Nome:  Felipe Rocha
+Email: felipe@empresa.com
+Cargo: Desenvolvedor
+Telefone: (11) 99252-2522
+
+Nome:  Gabriela Nunes
+Email: gabriela@empresa.om
+Cargo: Designer
+Telefone: (11) 99259-8888
+
+Nome:  Henrique Alves
+Email: henrique@empresa.om
+Cargo: Gerente
+Telefone: (11) 99999-2556
+
+Nome:  Isabela Ferreira
+Email: isabela@empresa.om
+Cargo: Analista
+Telefone: (11) 99999-2626
+
+Nome:  Joo Pereira
+Email: joao@empresa.m
+Cargo: Diretor
+Telefone: (11) 99999-2626
+

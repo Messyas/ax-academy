@@ -7,7 +7,7 @@ import os
 PASTA_ATUAL = os.getcwd()
 
 # ─── CONFIGURAÇÃO
-PLANILHA_ENTRADA = "clientes-3.xlsx"
+PLANILHA_ENTRADA = "clientes.xlsx"
 PLANILHA_SAIDA = "clientes_processados.xlsx"
 INTERVALO = 0.5  # segundos entre ações
 
