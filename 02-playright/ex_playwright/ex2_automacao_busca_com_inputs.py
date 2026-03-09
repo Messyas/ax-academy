@@ -43,64 +43,44 @@ def parte1():
 def parte2():
     with sync_playwright() as p:
         browser = p.chromium.launch(headless=False)
-        content = browser.new_context()
-        page = content.new_page()
+        context = browser.new_context()
+        page = context.new_page()
 
-        #1
-        page.goto('https://the-internet.herokuapp.com/tinymce',
-                  wait_until='domcontentloaded')
+        # usei esse site ja que o orinal nao funcionava
+        page.goto("https://anotepad.com/", wait_until="load")
 
-        # 1. CONTORNO DO AVISO DE ASSINATURA:
-        # Injetamos JavaScript para varrer a tela e deletar o banner de aviso (.tox-notification)
-        page.evaluate("document.querySelectorAll('.tox-notification').forEach(el => el.remove());")
+        titulo = page.get_by_role("textbox").first
+        titulo.wait_for(state="visible")
+        titulo.click()
 
-        # 2. O SEGREDO DO IFRAME:
-        # Avisamos o Playwright que queremos interagir com o documento que está DENTRO do iframe
-        editor_frame = page.frame_locator("iframe")
+        #limpa conteudo
+        page.keyboard.press("Control+A")
+        page.keyboard.press("Delete")
 
-        # Agora buscamos o corpo do editor (body) focado APENAS dentro do iframe
-        caixa_texto = editor_frame.locator("body#tinymce")
+        texto = (
+            "Playwright automatiza browsers com precisao. "
+            "RPA com Python e muito poderoso. "
+            "Aprenda automacao na pratica."
+        )
+        # digita tudo
+        titulo.type(texto, delay=30)
+        #copia
+        page.keyboard.press("Control+A")
+        page.keyboard.press("Control+C")
 
-        # Clicamos para garantir que o cursor está piscando lá dentro
-        caixa_texto.click()
+        #vai pro input de baixo
+        page.keyboard.press("Tab")
+        #copia
+        page.keyboard.press("Control+V")
+        #printa
+        page.screenshot(path="parte2.png", full_page=True)
 
-        #2 Localizar o editor de texto rico (TinyMCE)
-        mce = page.get_by_label("tynymce")
-
-        #3 Limpar o conteúdo existente com Control+A seguido de Delete]
-        mce.press("Control+a")
-        mce.press("Delete")
-        #4 Digitar o seguinte texto
-        mce.press_sequentially("Playwright automatiza browsers com precisao.", delay=100)
-        mce.press("Enter")
-        mce.press_sequentially("RPA com Python e muito poderoso.", delay=100)
-        mce.press("Enter")
-        mce.press_sequentially("Aprenda automacao na pratica.", delay=100)
-
-        page.wait_for_timeout(1000)
-
-        #5 Usar Control+A para selecionar todo o texto
-        mce.press("Control+a")
-
-        #6 Usar Control+C para copiar
-        mce.press("Control+c")
-
-        #7 Navegar para o campo de texto simples que aparece abaixo do editor
-
-        #8 Usar Control+V para colar o texto copiado
-        mce.press("Control+v")
-
-        #9 Tirar screenshot do resultado
-        page.screenshot(path="screenshot_ex2_parte2.png")
-
-        content.close()
+        context.close()
         browser.close()
 
-
 def main():
-    #parte1()
+    parte1()
     parte2()
-    #usar o dontpad no lugar da api
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()
