@@ -73,4 +73,4 @@ def run(request: RunRequest):
         
 
     #run
-    #bot_service:app --host 127.0.0.q --port 8001
+    #ovecorn bot_service:app --host 127.0.0.q --port 8001
