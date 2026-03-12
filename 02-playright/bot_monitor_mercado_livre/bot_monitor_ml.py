@@ -9,6 +9,9 @@ from google.oauth2.service_account import Credentials
 from playwright.async_api import async_playwright
 from playwright.sync_api import Playwright
 
+#GOOGLE_CREDENTIAL=C:\Users\Turma01\Documents\messyas\ax-lg\02-playright\bot_monitor_mercado_livre\credentials.json
+#SHEET_NAME=teste-mercadolivre
+
 load_dotenv()
 
 PRODUTO = "malbec"
