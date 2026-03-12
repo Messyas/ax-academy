@@ -1,0 +1,452 @@
+[
+  {
+    "titulo": "Don't post generated/AI-edited comments. HN is for conversation between humans",
+    "link": "https://news.ycombinator.com/newsguidelines.html#generated",
+    "score": 3688
+  },
+  {
+    "titulo": "Tony Hoare has died",
+    "link": "https://blog.computationalcomplexity.org/2026/03/tony-hoare-1934-2026.html",
+    "score": 1995
+  },
+  {
+    "titulo": "Temporal: The 9-year journey to fix time in JavaScript",
+    "link": "https://bloomberg.github.io/js-blog/post/temporal/",
+    "score": 705
+  },
+  {
+    "titulo": "Create value for others and don’t worry about the returns",
+    "link": "https://geohot.github.io//blog/jekyll/update/2026/03/11/running-69-agents.html",
+    "score": 678
+  },
+  {
+    "titulo": "Yann LeCun raises $1B to build AI that understands the physical world",
+    "link": "https://www.wired.com/story/yann-lecun-raises-dollar1-billion-to-build-ai-that-understands-the-physical-world/",
+    "score": 604
+  },
+  {
+    "titulo": "Making WebAssembly a first-class language on the Web",
+    "link": "https://hacks.mozilla.org/2026/02/making-webassembly-a-first-class-language-on-the-web/",
+    "score": 587
+  },
+  {
+    "titulo": "The MacBook Neo",
+    "link": "https://daringfireball.net/2026/03/the_macbook_neo",
+    "score": 559
+  },
+  {
+    "titulo": "Cloudflare crawl endpoint",
+    "link": "https://developers.cloudflare.com/changelog/post/2026-03-10-br-crawl-endpoint/",
+    "score": 482
+  },
+  {
+    "titulo": "How we hacked McKinsey's AI platform",
+    "link": "https://codewall.ai/blog/how-we-hacked-mckinseys-ai-platform",
+    "score": 439
+  },
+  {
+    "titulo": "Agents that run while I sleep",
+    "link": "https://www.claudecodecamp.com/p/i-m-building-agents-that-run-while-i-sleep",
+    "score": 415
+  },
+  {
+    "titulo": "Type resolution redesign, with language changes to taste",
+    "link": "https://ziglang.org/devlog/2026/#2026-03-10",
+    "score": 396
+  },
+  {
+    "titulo": "U+237C ⍼ Is Azimuth",
+    "link": "https://ionathan.ch/2026/02/16/angzarr.html",
+    "score": 392
+  },
+  {
+    "titulo": "Lego's 0.002mm specification and its implications for manufacturing (2025)",
+    "link": "https://www.thewave.engineer/articles.html/productivity/legos-0002mm-specification-and-its-implications-for-manufacturing-r120/",
+    "score": 377
+  },
+  {
+    "titulo": "The dead Internet is not a theory anymore",
+    "link": "https://www.adriankrebs.ch/blog/dead-internet/",
+    "score": 376
+  },
+  {
+    "titulo": "BitNet: Inference framework for 1-bit LLMs",
+    "link": "https://github.com/microsoft/BitNet",
+    "score": 348
+  },
+  {
+    "titulo": "I was interviewed by an AI bot for a job",
+    "link": "https://www.theverge.com/featured-video/892850/i-was-interviewed-by-an-ai-bot-for-a-job",
+    "score": 336
+  },
+  {
+    "titulo": "Show HN: s@: decentralized social networking over static sites",
+    "link": "http://satproto.org/",
+    "score": 311
+  },
+  {
+    "titulo": "Google closes deal to acquire Wiz",
+    "link": "https://www.wiz.io/blog/google-closes-deal-to-acquire-wiz",
+    "score": 301
+  },
+  {
+    "titulo": "Entities enabling scientific fraud at scale (2025)",
+    "link": "https://doi.org/10.1073/pnas.2420092122",
+    "score": 293
+  },
+  {
+    "titulo": "Britain is ejecting hereditary nobles from Parliament after 700 years",
+    "link": "https://apnews.com/article/uk-house-of-lords-hereditary-peers-expelled-535df8781dd01e8970acda1dca99d3d4",
+    "score": 265
+  },
+  {
+    "titulo": "Show HN: I built a tool that watches webpages and exposes changes as RSS",
+    "link": "https://sitespy.app",
+    "score": 262
+  },
+  {
+    "titulo": "Many SWE-bench-Passing PRs would not be merged",
+    "link": "https://metr.org/notes/2026-03-10-many-swe-bench-passing-prs-would-not-be-merged-into-main/",
+    "score": 245
+  },
+  {
+    "titulo": "FFmpeg-over-IP – Connect to remote FFmpeg servers",
+    "link": "https://github.com/steelbrain/ffmpeg-over-ip",
+    "score": 230
+  },
+  {
+    "titulo": "DHS Contracts Explorer – Hacked data from the Office of Industry Partnership",
+    "link": "https://micahflee.github.io/ice-contracts/",
+    "score": 227
+  },
+  {
+    "titulo": "Writing my own text editor, and daily-driving it",
+    "link": "https://blog.jsbarretto.com/post/text-editor",
+    "score": 223
+  },
+  {
+    "titulo": "Building a TB-303 from Scratch",
+    "link": "https://loopmaster.xyz/tutorials/tb303-from-scratch",
+    "score": 218
+  },
+  {
+    "titulo": "Faster asin() was hiding in plain sight",
+    "link": "https://16bpp.net/blog/post/faster-asin-was-hiding-in-plain-sight/",
+    "score": 215
+  },
+  {
+    "titulo": "Swiss e-voting pilot can't count 2,048 ballots after decryption failure",
+    "link": "https://www.theregister.com/2026/03/11/swiss_evote_usb_snafu/",
+    "score": 195
+  },
+  {
+    "titulo": "Atlassian to cut roughly 1,600 jobs in pivot to AI",
+    "link": "https://www.reuters.com/technology/atlassian-lay-off-about-1600-people-pivot-ai-2026-03-11/",
+    "score": 193
+  },
+  {
+    "titulo": "Iran-backed hackers claim wiper attack on medtech firm Stryker",
+    "link": "https://krebsonsecurity.com/2026/03/iran-backed-hackers-claim-wiper-attack-on-medtech-firm-stryker/",
+    "score": 185
+  },
+  {
+    "titulo": "Tested: How Many Times Can a DVD±RW Be Rewritten? Methodology and Results",
+    "link": "https://goughlui.com/2026/03/07/tested-how-many-times-can-a-dvd%C2%B1rw-be-rewritten-part-2-methodology-results/",
+    "score": 178
+  },
+  {
+    "titulo": "X is selling existing users' handles",
+    "link": "item?id=47340754",
+    "score": 176
+  },
+  {
+    "titulo": "Returning to Rails in 2026",
+    "link": "https://www.markround.com/blog/2026/03/05/returning-to-rails-in-2026/",
+    "score": 172
+  },
+  {
+    "titulo": "Personal Computer by Perplexity",
+    "link": "https://www.perplexity.ai/personal-computer-waitlist",
+    "score": 167
+  },
+  {
+    "titulo": "We are building data breach machines and nobody cares",
+    "link": "https://idealloc.me/posts/we-are-building-data-breach-machines-and-nobody-cares/",
+    "score": 164
+  },
+  {
+    "titulo": "I'm glad the Anthropic fight is happening now",
+    "link": "https://www.dwarkesh.com/p/dow-anthropic",
+    "score": 155
+  },
+  {
+    "titulo": "Show HN: Klaus – OpenClaw on a VM, batteries included",
+    "link": "https://klausai.com/",
+    "score": 149
+  },
+  {
+    "titulo": "Julia Snail – An Emacs Development Environment for Julia Like Clojure's Cider",
+    "link": "https://github.com/gcv/julia-snail",
+    "score": 149
+  },
+  {
+    "titulo": "5,200 holes carved into a Peruvian mountain left by an ancient economy",
+    "link": "https://newatlas.com/environment/5-200-holes-peruvian-mountain/",
+    "score": 132
+  },
+  {
+    "titulo": "Show HN: Open-source browser for AI agents",
+    "link": "https://github.com/theredsix/agent-browser-protocol",
+    "score": 129
+  },
+  {
+    "titulo": "Mesh over Bluetooth LE, TCP, or Reticulum",
+    "link": "https://github.com/torlando-tech/columba",
+    "score": 129
+  },
+  {
+    "titulo": "Physicist Astrid Eichhorn is a leader in the field of asymptotic safety",
+    "link": "https://www.quantamagazine.org/where-some-see-strings-she-sees-a-space-time-made-of-fractals-20260311/",
+    "score": 121
+  },
+  {
+    "titulo": "Why the global elite gave up on spelling and grammar",
+    "link": "https://www.wsj.com/lifestyle/jeffrey-epstein-files-bad-grammar-spelling-trump-ellison-dorsey-gates-thiel-cbfe9fb1",
+    "score": 118
+  },
+  {
+    "titulo": "Exploring the ocean with Raspberry Pi–powered marine robots",
+    "link": "https://www.raspberrypi.com/news/exploring-the-ocean-with-raspberry-pi-powered-marine-robots/",
+    "score": 113
+  },
+  {
+    "titulo": "Show HN: A context-aware permission guard for Claude Code",
+    "link": "https://github.com/manuelschipper/nah/",
+    "score": 110
+  },
+  {
+    "titulo": "Show HN: Vanilla JavaScript refinery simulator built to explain job to my kids",
+    "link": "https://fuelingcuriosity.com/game.html",
+    "score": 103
+  },
+  {
+    "titulo": "TADA: Speech generation through text-acoustic synchronization",
+    "link": "https://www.hume.ai/blog/opensource-tada",
+    "score": 99
+  },
+  {
+    "titulo": "Apple releases iOS 15.8.7 to fix Coruna exploit for iPhone 6S from 2015",
+    "link": "https://support.apple.com/en-us/126632",
+    "score": 99
+  },
+  {
+    "titulo": "3D-Knitting: The Ultimate Guide",
+    "link": "https://www.oliver-charles.com/pages/3d-knitting",
+    "score": 96
+  },
+  {
+    "titulo": "How much of HN is AI?",
+    "link": "https://lcamtuf.substack.com/p/how-much-of-hn-is-ai",
+    "score": 93
+  },
+  {
+    "titulo": "Against vibes: When is a generative model useful",
+    "link": "https://www.williamjbowman.com/blog/2026/03/05/against-vibes-when-is-a-generative-model-useful/",
+    "score": 91
+  },
+  {
+    "titulo": "Urea prices",
+    "link": "https://tradingeconomics.com/commodity/urea",
+    "score": 91
+  },
+  {
+    "titulo": "Datahäxan",
+    "link": "https://0dd.company/galleries/witches/7.html",
+    "score": 82
+  },
+  {
+    "titulo": "Standardizing source maps",
+    "link": "https://bloomberg.github.io/js-blog/post/standardizing-source-maps/",
+    "score": 77
+  },
+  {
+    "titulo": "Launch HN: Didit (YC W26) – Stripe for Identity Verification",
+    "link": "item?id=47324296",
+    "score": 75
+  },
+  {
+    "titulo": "1B identity records exposed in ID verification data leak",
+    "link": "https://www.aol.com/articles/1-billion-identity-records-exposed-152505381.html",
+    "score": 69
+  },
+  {
+    "titulo": "WebPKI and You",
+    "link": "https://blog.brycekerley.net/2026/03/08/webpki-and-you.html",
+    "score": 69
+  },
+  {
+    "titulo": "PeppyOS: A simpler alternative to ROS 2 (now with containers support)",
+    "link": "https://peppy.bot/",
+    "score": 68
+  },
+  {
+    "titulo": "Show HN: Autoresearch@home",
+    "link": "https://www.ensue-network.ai/autoresearch",
+    "score": 66
+  },
+  {
+    "titulo": "SBCL: A Sanely-Bootstrappable Common Lisp (2008) [pdf]",
+    "link": "https://research.gold.ac.uk/id/eprint/2336/1/sbcl.pdf",
+    "score": 64
+  },
+  {
+    "titulo": "Fungal Electronics (2021)",
+    "link": "https://arxiv.org/abs/2111.11231",
+    "score": 64
+  },
+  {
+    "titulo": "WireGuard Is Two Things",
+    "link": "https://www.proxylity.com/articles/wireguard-is-two-things.html",
+    "score": 59
+  },
+  {
+    "titulo": "Show HN: I built an ISP infrastructure emulator from scratch with a custom vBNG",
+    "link": "https://aether.saphal.me/dashboard/default",
+    "score": 58
+  },
+  {
+    "titulo": "About memory pressure, lock contention, and Data-oriented Design",
+    "link": "https://mnt.io/articles/about-memory-pressure-lock-contention-and-data-oriented-design/",
+    "score": 57
+  },
+  {
+    "titulo": "CNN Explainer – Learn Convolutional Neural Network in Your Browser (2020)",
+    "link": "https://poloclub.github.io/cnn-explainer/",
+    "score": 54
+  },
+  {
+    "titulo": "Preliminary data from a longitudinal AI impact study",
+    "link": "https://newsletter.getdx.com/p/ai-productivity-gains-are-10-not",
+    "score": 54
+  },
+  {
+    "titulo": "Avoiding Trigonometry (2013)",
+    "link": "https://iquilezles.org/articles/noacos/",
+    "score": 52
+  },
+  {
+    "titulo": "Show HN: Satellite imagery object detection using text prompts",
+    "link": "https://www.useful-ai-tools.com/tools/satellite-analysis-demo/",
+    "score": 50
+  },
+  {
+    "titulo": "What Happens After You Die? (2016)",
+    "link": "https://lamag.com/news/the-end/",
+    "score": 47
+  },
+  {
+    "titulo": "Printf-Tac-Toe",
+    "link": "https://github.com/carlini/printf-tac-toe",
+    "score": 42
+  },
+  {
+    "titulo": "NASA's DART spacecraft changed an asteroid's orbit around the sun",
+    "link": "https://www.sciencenews.org/article/spacecraft-changed-asteroid-orbit-nasa",
+    "score": 39
+  },
+  {
+    "titulo": "Launch HN: Prism (YC X25) – Workspace and API to generate and edit videos",
+    "link": "https://www.prismvideos.com",
+    "score": 37
+  },
+  {
+    "titulo": "Visualizing Ukkonen's Suffix Tree Algorithm",
+    "link": "https://www.abahgat.com/blog/visualizing-ukkonens-algorithm/",
+    "score": 37
+  },
+  {
+    "titulo": "Dolphin Progress Release 2603",
+    "link": "https://dolphin-emu.org/blog/2026/03/12/dolphin-progress-report-release-2603/",
+    "score": 31
+  },
+  {
+    "titulo": "Challenging the Single-Responsibility Principle",
+    "link": "https://kiss-and-solid.com/blog/keep-it-simple",
+    "score": 30
+  },
+  {
+    "titulo": "What Is a Tort?",
+    "link": "https://harvardlawreview.org/print/vol-139/what-is-a-tort/",
+    "score": 30
+  },
+  {
+    "titulo": "Launch HN: Sentrial (YC W26) – Catch AI agent failures before your users do",
+    "link": "https://www.sentrial.com/",
+    "score": 29
+  },
+  {
+    "titulo": "Six-Day and IP Address Certificates Available in Certbot",
+    "link": "https://letsencrypt.org/2026/03/11/shorter-certs-certbot",
+    "score": 22
+  },
+  {
+    "titulo": "What monotheism means is surprisingly hard to pin down",
+    "link": "https://www.newyorker.com/magazine/2026/03/09/how-god-got-so-great",
+    "score": 21
+  },
+  {
+    "titulo": "Reliable Software in the LLM Era",
+    "link": "https://quint-lang.org/posts/llm_era",
+    "score": 20
+  },
+  {
+    "titulo": "CRusTTY: A pedagogical C interpreter with time-travel debugging capabilities",
+    "link": "https://github.com/aicheye/crustty",
+    "score": 19
+  },
+  {
+    "titulo": "I Have 30 Years of Career Left. AI Made Me Rethink All of Them",
+    "link": "https://newsletter.thelongcommit.com/p/i-have-30-years-of-career-left-ai",
+    "score": 18
+  },
+  {
+    "titulo": "Galaxy Zoo",
+    "link": "https://www.zooniverse.org/projects/zookeeper/galaxy-zoo",
+    "score": 17
+  },
+  {
+    "titulo": "Can the Dictionary Keep Up?",
+    "link": "https://www.thenation.com/article/culture/stefan-fatsis-dictionary-history/",
+    "score": 15
+  },
+  {
+    "titulo": "Show HN: XLA-based array computing framework for R",
+    "link": "https://github.com/r-xla/anvil",
+    "score": 8
+  },
+  {
+    "titulo": "The Billionaires' War",
+    "link": "https://paulkrugman.substack.com/p/the-billionaires-war",
+    "score": 8
+  },
+  {
+    "titulo": "Iran appears to have conducted a significant cyberattack against a U.S. company",
+    "link": "https://www.nbcnews.com/world/iran/iran-appears-conducted-significant-cyberattack-us-company-first-war-st-rcna263084",
+    "score": 7
+  },
+  {
+    "titulo": "Celebrating Interesting Flickr Technologies",
+    "link": "https://medium.com/@brightcarvings/celebrating-flickr-technology-3c93c8ddecc2",
+    "score": 6
+  },
+  {
+    "titulo": "Newcomb's Paradox Needs a Demon",
+    "link": "https://samestep.com/blog/newcombs-paradox/",
+    "score": 5
+  },
+  {
+    "titulo": "Meticulous (YC S21) is hiring to redefine software dev",
+    "link": "https://jobs.ashbyhq.com/meticulous/3197ae3d-bb26-4750-9ed7-b830f640515e",
+    "score": 0
+  }
+]
