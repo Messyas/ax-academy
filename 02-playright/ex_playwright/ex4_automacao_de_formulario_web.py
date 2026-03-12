@@ -103,15 +103,15 @@ def enviar_doc():
         nome_enviado.wait_for(state="visible")
         texto_arquivo = nome_enviado.text_content().strip()
 
-        print("Nome do arquivo exibido na confirmação:", texto_arquivo)
+        print("Arquivo: ", texto_arquivo)
 
         page.screenshot(path="etapa4_upload.png")
 
         if texto_arquivo == "upload_teste.txt":
             os.remove(caminho_arquivo)
-            print("Arquivo local removido após upload bem-sucedido.")
+            print("Arquivo removido")
         else:
-            print("Arquivo local não foi removido, pois a confirmação não bateu com o esperado.")
+            print("Arquivo removido")
 
         content.close()
         browser.close()

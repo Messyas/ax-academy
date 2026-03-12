@@ -6,39 +6,42 @@ def parte1():
         content = browser.new_context()
         page = content.new_page()
 
-        page.goto('https://the-internet.herokuapp.com/inputs',
-                  wait_until='domcontentloaded')
+        page.goto(
+            'https://the-internet.herokuapp.com/inputs',
+            wait_until='domcontentloaded'
+        )
 
         # Localizar campo numerico
         campo_numero = page.locator("input[type='number']")
         campo_numero.click()
 
-        # Digitar com deley
+        # Digitar com delay
         campo_numero.press_sequentially("1000", delay=100)
         page.wait_for_timeout(1000)
 
-        # Apagar os dois últimos dígitos (00) com Backspace
+        # Apagar os dois últimos dígitos
         campo_numero.press("Backspace")
         campo_numero.press("Backspace")
         page.wait_for_timeout(1000)
 
         # Adicionar 5 ao final
-        campo_numero.press_sequentially("5")
+        campo_numero.press_sequentially("5", delay=100)
         page.wait_for_timeout(1000)
 
-        # Ctl + a
-        campo_numero.press("Control+a")
+        # Ctrl + A
+        campo_numero.press("Control+A")
         page.wait_for_timeout(1000)
 
         # Digitar 9999
         campo_numero.press_sequentially("9999", delay=100)
 
-        # imprimir no terminal
+        # Imprimir no terminal
         valor_final = campo_numero.input_value()
         print(f"O valor final do campo é: {valor_final}")
 
         content.close()
         browser.close()
+
 
 def parte2():
     with sync_playwright() as p:
@@ -46,37 +49,51 @@ def parte2():
         context = browser.new_context()
         page = context.new_page()
 
-        # usei esse site ja que o orinal nao funcionava
-        page.goto("https://anotepad.com/", wait_until="load")
+        page.goto(
+            "https://www.rapidtables.com/tools/notepad.html",
+            wait_until="domcontentloaded"
+        )
 
-        titulo = page.get_by_role("textbox").first
-        titulo.wait_for(state="visible")
-        titulo.click()
+        # Fecha aviso inicial, se aparecer
+        botao_close = page.get_by_text("Close")
+        if botao_close.first.is_visible():
+            botao_close.first.click()
 
-        #limpa conteudo
+        # Localiza a área principal de texto do notepad
+        editor = page.locator("textarea").first
+        editor.wait_for(state="visible")
+        editor.click()
+
+        # Limpa o conteúdo existente
         page.keyboard.press("Control+A")
         page.keyboard.press("Delete")
 
         texto = (
-            "Playwright automatiza browsers com precisao. "
-            "RPA com Python e muito poderoso. "
+            "Playwright automatiza browsers com precisao.\n"
+            "RPA com Python e muito poderoso.\n"
             "Aprenda automacao na pratica."
         )
-        # digita tudo
-        titulo.type(texto, delay=30)
-        #copia
+
+        # Digita o texto no editor
+        editor.press_sequentially(texto, delay=30)
+        page.wait_for_timeout(1000)
+
+        # Seleciona tudo e copia
         page.keyboard.press("Control+A")
         page.keyboard.press("Control+C")
+        page.wait_for_timeout(500)
 
-        #vai pro input de baixo
-        page.keyboard.press("Tab")
-        #copia
+        # Cola no final do próprio texto
+        page.keyboard.press("End")
+        page.keyboard.press("Enter")
         page.keyboard.press("Control+V")
-        #printa
+        page.wait_for_timeout(1000)
+
         page.screenshot(path="parte2.png", full_page=True)
 
         context.close()
         browser.close()
+
 
 def main():
     parte1()
