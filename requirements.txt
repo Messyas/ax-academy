@@ -1,0 +1,4 @@
+botcity-framework-web
+webdriver-manager
+selenium==4.10.0
+setuptools
