@@ -1,4 +1,6 @@
 botcity-framework-web
+botcity-framework-core
+webdriver-browser
 webdriver-manager
 selenium==4.10.0
 setuptools
