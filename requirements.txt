@@ -2,5 +2,8 @@ botcity-framework-web
 botcity-framework-core
 webdriver-browser
 webdriver-manager
+botcity-maestro-sdk
 selenium==4.10.0
 setuptools
+python-dotenv
+pandas

@@ -1,23 +1,34 @@
 import os
+import sys # vai ser utilizado dentro da instancia do botcity
 import time
-from pathlib import Path
 import base64
-import pandas as pd
 
 from botcity.web import WebBot, Browser, By
 from webdriver_manager.chrome import ChromeDriverManager
 from selenium.webdriver.support.ui import Select, WebDriverWait
 from selenium.webdriver.support import expected_conditions as ec
 
-# configurações
-INDEX_HTML = Path(r"C:\\Users\\\\Desktop\\botcity\\web\\index.html")
-CSV_PATH = Path(r"C:\\Users\\\\Desktop\\botcity\\web\\cadastros_portal_fake_20.csv")
-QTDE = 5
+from dotenv import load_dotenv
+from botcity.maestro import BotMaestroSDK, AutomationTaskFinishStatus
+
+load_dotenv()
+
+SERVER = os.getenv('MAESTRO_SERVER')
+LOGIN = os.getenv('MAESTRO_LOGIN')
+KEY = os.getenv('MAESTRO_KEY')
+DATAPOOL = os.getenv('DATAPOOL_LABEL')
+PORTAL_URL = os.getenv('PORTAL_URL')
 DELEY = 0.5
 
-def carregar_usuarios(csv_path):
-    df = pd.read_csv(csv_path, dtype=str)
-    return df.to_dict(orient='records')
+def conectar_maestro():
+    if len (sys.argv) > 1:
+        maestro = BotMaestroSDK.from_sys_args()
+        task_id = maestro.get_execution().task_id
+    else:
+        maestro = BotMaestroSDK()
+        maestro.login(server=SERVER, login=LOGIN, key=KEY)
+        task_id = None
+    return maestro, task_id
 
 #configurar webbot do botcity
 def iniciar_bot():
@@ -65,15 +76,37 @@ def b_cadastrar_usuario(bot, usuario):
     bot.find_element("brnSalvar", By.CSS_SELECTOR).click()
     time.sleep(DELEY)
 
-def cadastro_todos(bot, usuarios, qtd):
-    lista = usuarios[:qtd] if qtd else usuarios
-    total = len(lista)
+def cadastro_todos(bot, datapool, task_id):
+    ok, erros = 0, 0
+    while datapool.has_next():
+        item = datapool.next(task_id=task_id)
+        if item is None:
+            break
+        usuario = item.values
+        print(f"{ok+erros+1} {usuario['nome']} [{usuario['sobrenome']} sendo cadastrado...")
+        try:
+            b_cadastrar_usuario(bot, usuario)
+            item.report_done()
+            ok += 1
+            print("    Ok")
+        except Exception as e:
+            print(f"     ERRO: {e}")
+            erros += 1
+            try:
+                bot.find_element("#btnCancelar", By.CSS_SELECTOR).click()
+            except Exception:
+                pass
+            item.report_error() #marca o dado e erro
+        print(f"\nConcluido: {ok} OK | {erros} ERROS.")
+        return ok, erros
 
-    for i, usuario in enumerate(lista, start=1):
-        print(f"{i}/{total} {usuario['nome']} {usuario['sobrenome']}")
-        b_cadastrar_usuario(bot, usuario)
-
-    print(f'todos os {total} cadastros concluidos...')
+def finalizar_task(maestro, task_id, ok, erros):
+    if task_id:
+        maestro.finish_task(
+            task_id=task_id,
+            status=AutomationTaskFinishStatus.SUCCESS if erros == 0 else AutomationTaskFinishStatus.PARTIALLY_COMPLETED,
+            message=f"{ok} OK | {erros} ERROS."
+        )
 
 def tirar_screenshot(bot, arquivo="evidencia.png"):
     result = bot.driver.execute_cdp_cmd("Page.captureScreenshot", {
@@ -87,23 +120,18 @@ def tirar_screenshot(bot, arquivo="evidencia.png"):
     print(f"Screenshot salvo em: {arquivo}")
 
 def main():
-    # 1. carregar o csv
-    usuarios = carregar_usuarios(CSV_PATH)
-    # 2. iniciar o bot
+    maestro, task_id, = conectar_maestro()
     bot = iniciar_bot()
-    # 3. abrir portal
     try:
-        abrir_portal(bot, INDEX_HTML)
-        # 4. zerar o banco de dados
+        abrir_portal(bot, PORTAL_URL)
         zerar_base(bot)
-        # 5. cadastrar todos os usuarios
-        cadastro_todos(bot, usuarios, qtde=QTDE)
-        # 6. tirar uma evidencia com um print screen
+        datapool = maestro.get_datapool(label=DATAPOOL)
+        ok, erros = cadastro_todos(bot, datapool, task_id)
         tirar_screenshot(bot)
         time.sleep(3)
     finally:
-        # 7. fechar o navegador
         bot.stop_browser()
+        finalizar_task(maestro, task_id, ok, erros)
 
 if __name__ == "__main__":
     main()
